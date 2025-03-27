@@ -9,8 +9,7 @@ class SplashController extends GetxController {
     navigate();
   }
 
-  navigate () {
-    // Check user login and navigate
+  navigate() {
     Timer(const Duration(seconds: 5), SharedServices.checkLogin);
   }
 }

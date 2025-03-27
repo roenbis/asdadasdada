@@ -73,13 +73,13 @@ List<CourseModel> getFeaturedCourse = [
         totalLesson: 2,
         lesson: [
           Lessons(
-            title: 'Introduction to entrepreneurship',
+            title: 'Введение в JavaScript',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:53',
             isComplete: false,
           ),
           Lessons(
-            title: 'Things you need to start a business',
+            title: 'Установка и конфигурация JavaScript',
             lessonUrl: 'assets/videos/seo.mp4',
             duration: '00:05:29',
             isComplete: false,
@@ -92,7 +92,7 @@ List<CourseModel> getFeaturedCourse = [
         totalLesson: 1,
         lesson: [
           Lessons(
-            title: 'Business Outline',
+            title: 'Основы JavaScript',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:35',
             isComplete: false,
@@ -135,9 +135,9 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Full Course on SEO',
+    title: 'Python для начинающих',
     thumbnail:
-        'https://interactivecares-courses.com/wp-content/uploads/2023/06/june-6-768x402.png',
+        'https://aiit-sa.co.za/wp-content/uploads/2023/08/Python-Symbol.png',
     regularPrice: 2000,
     salePrice: 1000,
     author: AppConfig.appName,
@@ -147,9 +147,8 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Mastering Entrepreneurship',
-    thumbnail:
-        'https://interactivecares-courses.com/wp-content/uploads/2023/07/Course-Cover-Eng-1024x536.png',
+    title: 'PHP для начинающих',
+    thumbnail: 'https://www.sectorlink.com/img/blog/php-web-development.jpg',
     salePrice: 2000,
     regularPrice: 1000,
     author: AppConfig.appName,

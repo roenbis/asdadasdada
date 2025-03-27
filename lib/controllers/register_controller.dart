@@ -14,21 +14,19 @@ class RegisterController extends GetxController {
   final RxBool isLoading = false.obs;
 
   void validateEmail(String email) {
-    // Regular expression for a simple email validation
     String emailRegex = r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$';
     RegExp regex = RegExp(emailRegex);
 
     if (regex.hasMatch(email)) {
       emailError.value = '';
     } else {
-      emailError.value = 'Invalid email address';
+      emailError.value = 'Неверный адрес электронной почты';
     }
   }
 
   void validateConfirmPassword(String confirmPassword) {
-    // Confirm Password validation logic
     if (confirmPassword != user.password) {
-      confirmPasswordError.value = 'Passwords do not match';
+      confirmPasswordError.value = 'Пароли не совпадают';
     } else {
       confirmPasswordError.value = '';
     }
@@ -42,9 +40,9 @@ class RegisterController extends GetxController {
     if (isRegistered) {
       Get.dialog(
         CustomAlert(
-          title: 'Congratulations',
-          description: 'You have completed your registration!',
-          buttonText: 'Sounds Good!',
+          title: 'Поздравляем',
+          description: 'Вы завершили регистрацию!',
+          buttonText: 'Звучит хорошо!',
           image: AnimationManager.success,
           isAnimated: true,
           onButtonTap: () => Get.offAllNamed(RouteNames.home),
@@ -54,9 +52,9 @@ class RegisterController extends GetxController {
     } else {
       Get.dialog(
         const CustomAlert(
-          title: 'Error!',
-          description: 'Something is wrong while trying to register!',
-          buttonText: 'Try Again',
+          title: 'Ошибка!',
+          description: 'Что-то не так при попытке регистрации!',
+          buttonText: 'Попробуйте еще раз',
           image: AnimationManager.error,
           isAnimated: true,
         ),

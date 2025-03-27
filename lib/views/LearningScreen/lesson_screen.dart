@@ -106,14 +106,14 @@ class LessonScreen extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Type',
-                                  subtitle: 'Video',
+                                  title: 'Тип',
+                                  subtitle: 'Видео',
                                   icon: Icons.file_present_sharp,
                                 ),
                               ),
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Size',
+                                  title: 'Размер',
                                   subtitle: '3.95 MB',
                                   icon: Icons.font_download_rounded,
                                 ),
@@ -125,15 +125,15 @@ class LessonScreen extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Publish',
-                                  subtitle: '1 Mar 2022',
+                                  title: 'Опубликовать',
+                                  subtitle: '24 Мар 2025',
                                   icon: Icons.date_range_sharp,
                                 ),
                               ),
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Downloadable',
-                                  subtitle: 'No',
+                                  title: 'Скачать',
+                                  subtitle: 'Нет',
                                   icon: Icons.download_for_offline,
                                 ),
                               ),
@@ -151,7 +151,7 @@ class LessonScreen extends StatelessWidget {
                     children: [
                       Expanded(
                           child: CustomButton(
-                        buttonTitle: 'Previous Lesson',
+                        buttonTitle: 'Предыдущий урок',
                         isBorder: true,
                         onTap: () {
                           controller.previousLesson();
@@ -162,7 +162,7 @@ class LessonScreen extends StatelessWidget {
                       ),
                       Expanded(
                           child: CustomButton(
-                        buttonTitle: 'Next Lesson',
+                        buttonTitle: 'Следующий урок',
                         isBorder: true,
                         onTap: () {
                           controller.nextLesson(lessons);
@@ -176,10 +176,10 @@ class LessonScreen extends StatelessWidget {
                   CustomButton(
                     buttonTitle:
                         controller.allLessonsCompleted(lessons, course.topics)
-                            ? 'Claim Certificate'
+                            ? 'Получить сертификат'
                             : lesson.isComplete
-                                ? 'Completed'
-                                : 'Complete Lesson',
+                                ? 'Завершено'
+                                : 'Законченный урок',
                     onTap: () =>
                         controller.allLessonsCompleted(lessons, course.topics)
                             ? null

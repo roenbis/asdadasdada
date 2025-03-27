@@ -11,14 +11,13 @@ class LoginController extends GetxController {
   final RxBool isLoading = false.obs;
 
   void validateEmail(String email) {
-    // Regular expression for a simple email validation
     String emailRegex = r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$';
     RegExp regex = RegExp(emailRegex);
 
     if (regex.hasMatch(email)) {
       emailError.value = '';
     } else {
-      emailError.value = 'Invalid email address';
+      emailError.value = 'Неверный адрес электронной почты';
     }
   }
 

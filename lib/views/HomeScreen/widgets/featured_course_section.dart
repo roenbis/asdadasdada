@@ -98,7 +98,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                     ),
                                   ),
                                   TextFormat.extraSmall(
-                                    text: 'By ${data.author}',
+                                    text: 'На ${data.author}',
                                     opacity: .5,
                                   ),
                                   data.salePrice != null

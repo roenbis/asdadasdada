@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interactive_cares_lms/utils/themes.dart';
 
-
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final String? labelText;
@@ -39,7 +38,9 @@ class CustomTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        topLabelText == null ? const SizedBox() : TextFormat.small(text: topLabelText!),
+        topLabelText == null
+            ? const SizedBox()
+            : TextFormat.small(text: topLabelText!),
         const SizedBox(
           height: 5,
         ),
@@ -52,45 +53,44 @@ class CustomTextField extends StatelessWidget {
           style: const TextStyle(fontWeight: FontWeight.w500),
           validator: isRequired == true
               ? (value) {
-            if (value!.isEmpty) {
-              return 'This field is required';
-            }
+                  if (value!.isEmpty) {
+                    return 'Это поле обязательно для заполнения';
+                  }
 
-            if (isLogin != true) {
-              if (value.length < 8) {
-                return 'Password must be at least 8 characters';
-              }
-            }
-            return null;
-          }
+                  if (isLogin != true) {
+                    if (value.length < 8) {
+                      return 'Пароль должен состоять не менее чем из 8 символов';
+                    }
+                  }
+                  return null;
+                }
               : null,
           decoration: InputDecoration(
-            hintText: hintText,
-            hintStyle: TextStyle(
-              color: Colors.black.withOpacity(.5),
-            ),
-            filled: true,
-            labelText: labelText,
-            fillColor: Colors.white,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15),
-              borderSide: const BorderSide(
-                color: Colors.transparent,
+              hintText: hintText,
+              hintStyle: TextStyle(
+                color: Colors.black.withOpacity(.5),
               ),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15),
-              borderSide: BorderSide(
-                color: Colors.black.withOpacity(.2),
+              filled: true,
+              labelText: labelText,
+              fillColor: Colors.white,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: const BorderSide(
+                  color: Colors.transparent,
+                ),
               ),
-            ),
-            prefixIcon: Icon(
-              prefixIcon,
-              color: Colors.black.withOpacity(.5),
-            ),
-            suffixIcon: suffixIcon,
-            errorText: errorText
-          ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  color: Colors.black.withOpacity(.2),
+                ),
+              ),
+              prefixIcon: Icon(
+                prefixIcon,
+                color: Colors.black.withOpacity(.5),
+              ),
+              suffixIcon: suffixIcon,
+              errorText: errorText),
         ),
       ],
     );

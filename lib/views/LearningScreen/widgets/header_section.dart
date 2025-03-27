@@ -43,7 +43,7 @@ class HeaderSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextFormat.extraSmall(
-                        text: 'By ${arg.author}', opacity: .5),
+                        text: 'На ${arg.author}', opacity: .5),
                     Row(
                       children: [
                         SizedBox(

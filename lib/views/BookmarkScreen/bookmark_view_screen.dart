@@ -10,29 +10,24 @@ import 'package:video_player/video_player.dart';
 class BookmarkPlayerScreen extends StatelessWidget {
   const BookmarkPlayerScreen({super.key});
 
-
   Duration parseTimeToDuration(String timeString) {
     List<String> parts = timeString.split(':');
 
-    // Extract hours, minutes, and seconds
     int hours = int.parse(parts[0]);
     int minutes = int.parse(parts[1]);
     double seconds = double.parse(parts[2]);
 
-    // Convert seconds to milliseconds (since milliseconds is the smallest unit supported by Duration)
     int milliseconds = (seconds * 1000).round();
 
     return Duration(hours: hours, minutes: minutes, milliseconds: milliseconds);
   }
-
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     final arg = Get.arguments as Map;
     return Scaffold(
-      appBar:
-      inAppBar('Bookmark Player'),
+      appBar: inAppBar('Проигрыватель избранного'),
       body: GetBuilder<BookmarkController>(builder: (controller) {
         return Padding(
           padding: const EdgeInsets.all(15),
@@ -59,7 +54,8 @@ class BookmarkPlayerScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(arg['data']['title'],
+                          Text(
+                            arg['data']['title'],
                             style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w500, fontSize: 16),
                           ),
@@ -76,9 +72,8 @@ class BookmarkPlayerScreen extends StatelessWidget {
                             child: ChewieVideoPlayer(
                               key: ValueKey(arg['data']['lesson_url']),
                               videoPlayerController:
-                              VideoPlayerController.asset(
+                                  VideoPlayerController.asset(
                                 arg['data']['lesson_url'],
-
                               ),
                               autoPlay: true,
                               looping: true,
@@ -93,7 +88,7 @@ class BookmarkPlayerScreen extends StatelessWidget {
                 ],
               ),
               CustomButton(
-                buttonTitle: 'Delete Bookmark',
+                buttonTitle: 'Удалить Избранное',
                 onTap: () {
                   controller.deleteBookmark(arg['index']);
                   Get.back();

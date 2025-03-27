@@ -7,7 +7,6 @@ class BookmarkController extends GetxController {
   RxList bookmarks = [].obs;
 
   void retrieveBookmarks() async {
-    // Retrieve the bookmarks from shared preferences
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (prefs.containsKey('bookmarks')) {
       bookmarks.value = List<Map<String, dynamic>>.from(
@@ -25,13 +24,10 @@ class BookmarkController extends GetxController {
       json.decode(prefs.getString('bookmarks')!),
     );
 
-    // Remove the bookmark at the specified index
     updatedBookmarks.removeAt(index);
 
-    // Save the updated bookmarks
     prefs.setString('bookmarks', json.encode(updatedBookmarks));
 
-    // Refresh the state to reflect the changes in the UI
     bookmarks.value = updatedBookmarks;
     update();
     Get.snackbar('Удалено', 'Избранное успешно удалена');

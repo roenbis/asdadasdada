@@ -22,7 +22,7 @@ class LatestCoursesSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Latest Courses',
+              'Последние курсы',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
@@ -30,7 +30,7 @@ class LatestCoursesSection extends StatelessWidget {
               ),
             ),
             Text(
-              'View All',
+              'Посмотреть все',
               style: GoogleFonts.poppins(
                 color: AppColors.primary,
               ),

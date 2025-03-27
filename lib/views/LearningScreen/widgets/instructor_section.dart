@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../helpers/star_display_helper.dart';
 import '../../../utils/colors.dart';
 
@@ -23,7 +22,7 @@ class InstructorSection extends StatelessWidget {
             ),
           ),
         ),
-        title: const Text('Interactive Cares'),
+        title: const Text('Lorem Ipsum'),
         subtitle: StarDisplayWidget(
           value: 4,
           filledStar: Icon(

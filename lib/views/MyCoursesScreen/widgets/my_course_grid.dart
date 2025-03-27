@@ -121,7 +121,7 @@ class MyCourseGrid extends StatelessWidget {
                                 children: [
                                   TextFormat.extraSmall(
                                     text:
-                                        '${(controller.overallCourseProgress.value * 100).toStringAsFixed(0)}% Completed',
+                                        '${(controller.overallCourseProgress.value * 100).toStringAsFixed(0)}% Завершен',
                                     opacity: .5,
                                   )
                                 ],
@@ -146,7 +146,7 @@ class MyCourseGrid extends StatelessWidget {
                             vertical: 10,
                           ),
                           child: Text(
-                            "Continue Course",
+                            "Продолжить курс",
                           ),
                         ),
                       ),

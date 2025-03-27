@@ -13,9 +13,7 @@ class CourseController extends GetxController {
 
   RxDouble overallCourseProgress = 0.0.obs;
 
-  // Function to handle expansion state
   void handleExpansion(int index) {
-    // Update the expandedTileIndex
     expandedTileIndex.value = index;
     update();
     expandedTileIndex.refresh();
@@ -39,14 +37,12 @@ class CourseController extends GetxController {
     lessons![currentLessonIndex.value].isComplete = true;
     update();
 
-    // Check if all lessons are completed
     if (allLessonsCompleted(lessons, course.topics)) {
       Get.dialog(
         CustomAlert(
-          title: 'Congratulations!',
-          description:
-              'You have completed "${course.title}" course successfully',
-          buttonText: 'Claim Certificate',
+          title: 'Поздравляем!',
+          description: 'Вы завершили "${course.title}" курс успешно',
+          buttonText: 'Получить сертификат',
           image: AnimationManager.success,
           isAnimated: true,
           onButtonTap: () => Get.offAllNamed(RouteNames.home),

@@ -82,7 +82,7 @@ class ModulesSection extends StatelessWidget {
                                   child: Align(
                                     alignment: Alignment.center,
                                     child: TextFormat.extraSmall(
-                                      text: '${topic.totalLesson} Lessons',
+                                      text: '${topic.totalLesson} Уроки',
                                       textColor: Colors.deepPurple,
                                     ),
                                   ),

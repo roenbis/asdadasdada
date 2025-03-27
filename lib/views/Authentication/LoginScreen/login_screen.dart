@@ -28,9 +28,9 @@ class LoginScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(ImageManager.logo),
-                      TextFormat.bold(text: 'Welcome Back!'),
+                      TextFormat.bold(text: 'С возвращением!'),
                       TextFormat.small(
-                        text: 'Login to continue',
+                        text: 'Войдите, чтобы продолжить',
                         textColor: Colors.black.withOpacity(.5),
                       ),
                     ],
@@ -41,19 +41,18 @@ class LoginScreen extends StatelessWidget {
 
                   Obx(() => Column(
                         children: [
-                          // Login Form
                           Form(
                             key: controller.globalKey,
                             child: Column(
                               children: [
                                 CustomTextField(
                                   topLabelText: 'Email',
-                                  hintText: 'Enter your email',
+                                  hintText: 'Введите свой e-mail',
                                   prefixIcon: Icons.alternate_email,
                                   isRequired: true,
                                   errorText:
                                       controller.emailError.value.isNotEmpty
-                                          ? 'Invalid Email Address'
+                                          ? 'Неверный адрес электронной почты'
                                           : null,
                                   onChanged: (email) {
                                     controller.user.email = email;
@@ -65,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                                 ),
                                 CustomTextField(
                                   topLabelText: 'Пароль',
-                                  hintText: 'Enter account password',
+                                  hintText: 'Введите пароль учетной записи',
                                   prefixIcon: Icons.password,
                                   isRequired: true,
                                   isSecured: true,
@@ -79,7 +78,6 @@ class LoginScreen extends StatelessWidget {
                           const SizedBox(
                             height: 15,
                           ),
-
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
@@ -92,7 +90,6 @@ class LoginScreen extends StatelessWidget {
                           const SizedBox(
                             height: 15,
                           ),
-
                           CustomButton(
                             isLoading: controller.isLoading.value,
                             buttonTitle: 'Войти',
@@ -104,16 +101,14 @@ class LoginScreen extends StatelessWidget {
                               Get.toNamed(RouteNames.home);
                             },
                           ),
-
                           const SizedBox(
                             height: 15,
                           ),
-
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextFormat.small(
-                                text: "Don't have an account?",
+                                text: "Нет аккаунта?",
                                 opacity: 0.5,
                               ),
                               const SizedBox(
