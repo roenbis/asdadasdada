@@ -11,24 +11,22 @@ class BottomBarView extends StatelessWidget {
     return Obx(() => Scaffold(
           body: controller.screens[controller.currentIndex.value],
           bottomNavigationBar: BottomNavigationBar(
-            currentIndex: controller.currentIndex.value,
+              currentIndex: controller.currentIndex.value,
               onTap: (index) => controller.changeIndex(index),
               items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.book),
-              label: 'Bookmark',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.co_present_outlined),
-              label: 'My Course',
-            ),
-          ]),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Главная',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.book),
+                  label: 'Избранное',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.co_present_outlined),
+                  label: 'Мой курсы',
+                ),
+              ]),
         ));
   }
 }
-
-

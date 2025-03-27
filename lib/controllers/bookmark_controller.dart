@@ -34,7 +34,7 @@ class BookmarkController extends GetxController {
     // Refresh the state to reflect the changes in the UI
     bookmarks.value = updatedBookmarks;
     update();
-    Get.snackbar('Deleted', 'Bookmark successfully deleted');
+    Get.snackbar('Удалено', 'Избранное успешно удалена');
     bookmarks.refresh();
   }
 }
