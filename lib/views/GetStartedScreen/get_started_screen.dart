@@ -25,32 +25,32 @@ class GetStartedScreen extends StatelessWidget {
               Column(
                 children: [
                   TextFormat.bold(
-                    text: 'Create your own\nstudy plan',
+                    text: 'Создайте свой собственный\n учебный план',
                   ),
                   const SizedBox(
                     height: 10,
                   ),
                   TextFormat.small(
                     text:
-                    'Study according to the\nstudy plan, make study\nmore motivated',
+                        'Занимайтесь по учебному плану, \nповышайте мотивацию к учебе.',
                     opacity: 0.5,
                   ),
                 ],
               ),
               Row(
                 children: [
+                  // Expanded(
+                  //   child: CustomButton(
+                  //     buttonTitle: 'Sign up',
+                  //     onTap: () => Get.toNamed(RouteNames.register),
+                  //   ),
+                  // ),
+                  // const SizedBox(
+                  //   width: 10,
+                  // ),
                   Expanded(
                     child: CustomButton(
-                      buttonTitle: 'Sign up',
-                      onTap: () => Get.toNamed(RouteNames.register),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: CustomButton(
-                      buttonTitle: 'Login',
+                      buttonTitle: 'Войти',
                       isBorder: true,
                       onTap: () => Get.toNamed(RouteNames.login),
                     ),

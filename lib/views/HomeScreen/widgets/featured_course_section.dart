@@ -19,7 +19,7 @@ class FeaturedCourseSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Featured Courses',
+              'Популярные курсы',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
@@ -27,7 +27,7 @@ class FeaturedCourseSection extends StatelessWidget {
               ),
             ),
             Text(
-              'View All',
+              'Посмотреть все',
               style: GoogleFonts.poppins(
                 color: AppColors.primary,
               ),
@@ -105,20 +105,20 @@ class FeaturedCourseSection extends StatelessWidget {
                                       ? Row(
                                           children: [
                                             TextFormat.small(
-                                                text: '৳${data.salePrice}',
+                                                text: '${data.salePrice}',
                                                 textColor: AppColors.primary,
                                                 fontWeight: FontWeight.w700),
                                             const SizedBox(
                                               width: 10,
                                             ),
                                             TextFormat.small(
-                                                text: '৳${data.regularPrice}',
+                                                text: '${data.regularPrice}',
                                                 decoration:
                                                     TextDecoration.lineThrough),
                                           ],
                                         )
                                       : TextFormat.small(
-                                          text: '৳${data.regularPrice}',
+                                          text: '${data.regularPrice}',
                                           textColor: AppColors.primary,
                                           fontWeight: FontWeight.w700),
                                 ],
@@ -146,7 +146,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                           color: AppColors.primary,
                                         ),
                                         Text(
-                                          'Add to cart',
+                                          'Добавить в корзину',
                                           style: GoogleFonts.poppins(
                                             color: AppColors.primary,
                                           ),

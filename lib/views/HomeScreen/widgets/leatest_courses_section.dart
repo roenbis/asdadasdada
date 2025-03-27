@@ -90,24 +90,26 @@ class LatestCoursesSection extends StatelessWidget {
                           const SizedBox(
                             height: 5,
                           ),
-                          data.salePrice != null ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextFormat.small(
-                                text: '৳${data.salePrice}',
-                                textColor: AppColors.primary,
-                                fontWeight: FontWeight.w800,
-                              ),
-                              TextFormat.small(
-                                text: '৳${data.regularPrice}',
-                                decoration: TextDecoration.lineThrough
-                              ),
-                            ],
-                          ) : TextFormat.small(
-                            text: '৳${data.regularPrice}',
-                            textColor: AppColors.primary,
-                            fontWeight: FontWeight.w800,
-                          ),
+                          data.salePrice != null
+                              ? Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    TextFormat.small(
+                                      text: '${data.salePrice}',
+                                      textColor: AppColors.primary,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                    TextFormat.small(
+                                        text: '${data.regularPrice}',
+                                        decoration: TextDecoration.lineThrough),
+                                  ],
+                                )
+                              : TextFormat.small(
+                                  text: '${data.regularPrice}',
+                                  textColor: AppColors.primary,
+                                  fontWeight: FontWeight.w800,
+                                ),
                           const SizedBox(
                             height: 5,
                           ),
@@ -122,7 +124,7 @@ class LatestCoursesSection extends StatelessWidget {
                                   horizontal: 15,
                                   vertical: 10,
                                 ),
-                                child: Text("Buy Now"),
+                                child: Text("Купить сейчас"),
                               ),
                             ),
                           )

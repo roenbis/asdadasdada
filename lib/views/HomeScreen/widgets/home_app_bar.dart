@@ -22,13 +22,13 @@ class HomeAppBar extends StatelessWidget {
                   future: AuthHelper.getName(),
                   builder: (context, snapshot) {
                     return TextFormat.bold(
-                      text: 'Hi ${snapshot.data ?? 'Shirajul'},',
+                      text: 'Привет ${snapshot.data ?? 'User'},',
                       textColor: Colors.white,
                     );
                   },
                 ),
                 TextFormat.small(
-                  text: "Let's start learning",
+                  text: "Начинаем учиться",
                   fontWeight: FontWeight.w300,
                   textColor: Colors.white,
                 ),

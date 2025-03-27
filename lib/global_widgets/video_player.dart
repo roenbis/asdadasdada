@@ -54,15 +54,15 @@ class _ChewieVideoPlayerState extends State<ChewieVideoPlayer> {
           ? null
           : (context) {
               return [
-                OptionItem(
-                  onTap: () {
-                    Duration currentDuration =
-                        _chewieController.videoPlayerController.value.position;
-                    storeBookmark(currentDuration);
-                  },
-                  iconData: Icons.book,
-                  title: 'Bookmark Current Time',
-                ),
+                // OptionItem(
+                //   onTap: () {
+                //     Duration currentDuration =
+                //         _chewieController.videoPlayerController.value.position;
+                //     storeBookmark(currentDuration);
+                //   },
+                //   iconData: Icons.book,
+                //   title: 'Bookmark Current Time',
+                // ),
               ];
             },
     );

@@ -32,11 +32,11 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     HomeAppBar(),
                     Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 15),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                       child: Column(
                         children: [
-                          SliderSection(),
+                          //SliderSection(),
                           CategorySection(),
                           FeaturedCourseSection(),
                           LatestCoursesSection(),

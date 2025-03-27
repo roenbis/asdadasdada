@@ -40,97 +40,95 @@ class LoginScreen extends StatelessWidget {
                   ),
 
                   Obx(() => Column(
-                    children: [
-                      // Login Form
-                      Form(
-                        key: controller.globalKey,
-                        child: Column(
-                          children: [
-                            CustomTextField(
-                              topLabelText: 'Your Email',
-                              hintText: 'Enter your email',
-                              prefixIcon: Icons.alternate_email,
-                              isRequired: true,
-                              errorText:
-                              controller.emailError.value.isNotEmpty
-                                  ? 'Invalid Email Address'
-                                  : null,
-                              onChanged: (email) {
-                                controller.user.email = email;
-                                controller.validateEmail(email);
-                              },
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            CustomTextField(
-                              topLabelText: 'Password',
-                              hintText: 'Enter account password',
-                              prefixIcon: Icons.password,
-                              isRequired: true,
-                              isSecured: true,
-                              isLogin: true,
-                              onChanged: (p0) => controller.user.password = p0,
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-
-                      // Forget Password Button
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          TextFormat.small(
-                            text: 'Forget password?',
-                            opacity: 0.5,
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-
-                      // Login Button
-                      CustomButton(
-                        isLoading: controller.isLoading.value,
-                        buttonTitle: 'Log In',
-                        onTap: () {
-                          // Check the form is valid or not
-                          if (controller.globalKey.currentState!.validate()) {
-                            controller.login();
-                          }
-
-                          // Otherwise it will trow an error message
-                        },
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-
-                      // Create Account Button
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextFormat.small(
-                            text: "Don't have an account?",
-                            opacity: 0.5,
+                          // Login Form
+                          Form(
+                            key: controller.globalKey,
+                            child: Column(
+                              children: [
+                                CustomTextField(
+                                  topLabelText: 'Email',
+                                  hintText: 'Enter your email',
+                                  prefixIcon: Icons.alternate_email,
+                                  isRequired: true,
+                                  errorText:
+                                      controller.emailError.value.isNotEmpty
+                                          ? 'Invalid Email Address'
+                                          : null,
+                                  onChanged: (email) {
+                                    controller.user.email = email;
+                                    controller.validateEmail(email);
+                                  },
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                CustomTextField(
+                                  topLabelText: 'Пароль',
+                                  hintText: 'Enter account password',
+                                  prefixIcon: Icons.password,
+                                  isRequired: true,
+                                  isSecured: true,
+                                  isLogin: true,
+                                  onChanged: (p0) =>
+                                      controller.user.password = p0,
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(
-                            width: 5,
+                            height: 15,
                           ),
-                          TextFormat.small(
-                            text: "Sign Up",
-                            textColor: AppColors.primary,
-                            fontWeight: FontWeight.w600,
-                            onTap: () => Get.toNamed(RouteNames.register),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              TextFormat.small(
+                                text: 'Забыли пароль?',
+                                opacity: 0.5,
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+
+                          CustomButton(
+                            isLoading: controller.isLoading.value,
+                            buttonTitle: 'Войти',
+                            onTap: () {
+                              // if (controller.globalKey.currentState!.validate()) {
+                              //   controller.login();
+                              // }
+
+                              Get.toNamed(RouteNames.home);
+                            },
+                          ),
+
+                          const SizedBox(
+                            height: 15,
+                          ),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextFormat.small(
+                                text: "Don't have an account?",
+                                opacity: 0.5,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              // TextFormat.small(
+                              //   text: "Sign Up",
+                              //   textColor: AppColors.primary,
+                              //   fontWeight: FontWeight.w600,
+                              //   onTap: () => Get.toNamed(RouteNames.register),
+                              // ),
+                            ],
                           ),
                         ],
-                      ),
-                    ],
-                  )),
+                      )),
                 ],
               ),
             ),

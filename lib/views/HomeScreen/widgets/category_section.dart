@@ -15,12 +15,14 @@ class CategorySection extends StatelessWidget {
         const SizedBox(
           height: 15,
         ),
-        Text('Categories',
-        style: GoogleFonts.poppins(
-          fontWeight: FontWeight.w700,
-          fontSize: 16,
-          color: Colors.black.withOpacity(.6),
-        ),),
+        Text(
+          'Категории',
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w700,
+            fontSize: 16,
+            color: Colors.black.withOpacity(.6),
+          ),
+        ),
         SizedBox(
           height: 120,
           child: ListView.builder(
