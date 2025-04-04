@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/controllers/home_controller.dart';
+import 'package:qazquery/controllers/home_controller.dart';
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});
@@ -16,7 +16,7 @@ class CategorySection extends StatelessWidget {
           height: 15,
         ),
         Text(
-          'Категории',
+          'Категория',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w700,
             fontSize: 16,

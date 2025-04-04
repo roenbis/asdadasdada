@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/course_controller.dart';
-import 'package:interactive_cares_lms/models/course_model.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
-import 'package:interactive_cares_lms/utils/colors.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/controllers/course_controller.dart';
+import 'package:qazquery/models/course_model.dart';
+import 'package:qazquery/routes/route_names.dart';
+import 'package:qazquery/utils/assets_manager.dart';
+import 'package:qazquery/utils/colors.dart';
+import 'package:qazquery/utils/themes.dart';
 import '../../../helpers/star_display_helper.dart';
 
 class MyCourseGrid extends StatelessWidget {
@@ -121,7 +121,7 @@ class MyCourseGrid extends StatelessWidget {
                                 children: [
                                   TextFormat.extraSmall(
                                     text:
-                                        '${(controller.overallCourseProgress.value * 100).toStringAsFixed(0)}% Завершен',
+                                        '${(controller.overallCourseProgress.value * 100).toStringAsFixed(0)}% Аяқталды',
                                     opacity: .5,
                                   )
                                 ],
@@ -146,7 +146,7 @@ class MyCourseGrid extends StatelessWidget {
                             vertical: 10,
                           ),
                           child: Text(
-                            "Продолжить курс",
+                            "Курсты жалғастыру",
                           ),
                         ),
                       ),

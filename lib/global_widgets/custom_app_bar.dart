@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
+import 'package:qazquery/utils/assets_manager.dart';
 
-PreferredSizeWidget customAppBar ({
+PreferredSizeWidget customAppBar({
   String? title,
 }) {
   return AppBar(
     title: Row(
       children: [
-        Image.asset(ImageManager.logo, width: 100,)
+        Image.asset(
+          ImageManager.logo,
+          width: 100,
+        )
       ],
     ),
   );

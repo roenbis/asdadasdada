@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/models/course_model.dart';
+import 'package:qazquery/models/course_model.dart';
 import '../../../helpers/star_display_helper.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/themes.dart';
@@ -43,7 +43,7 @@ class HeaderSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextFormat.extraSmall(
-                        text: 'На ${arg.author}', opacity: .5),
+                        text: 'Авторы ${arg.author}', opacity: .5),
                     Row(
                       children: [
                         SizedBox(

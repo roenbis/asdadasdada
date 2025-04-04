@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/course_controller.dart';
-import 'package:interactive_cares_lms/models/course_model.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
+import 'package:qazquery/controllers/course_controller.dart';
+import 'package:qazquery/models/course_model.dart';
+import 'package:qazquery/routes/route_names.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/themes.dart';
 
@@ -82,7 +82,7 @@ class ModulesSection extends StatelessWidget {
                                   child: Align(
                                     alignment: Alignment.center,
                                     child: TextFormat.extraSmall(
-                                      text: '${topic.totalLesson} Уроки',
+                                      text: '${topic.totalLesson} Сабақтар',
                                       textColor: Colors.deepPurple,
                                     ),
                                   ),

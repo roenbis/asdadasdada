@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/core/services/auth_services.dart';
-import 'package:interactive_cares_lms/models/user_model.dart';
+import 'package:qazquery/core/services/auth_services.dart';
+import 'package:qazquery/models/user_model.dart';
 import '../global_widgets/custom_alert.dart';
 import '../routes/route_names.dart';
 import '../utils/assets_manager.dart';
@@ -20,13 +20,13 @@ class RegisterController extends GetxController {
     if (regex.hasMatch(email)) {
       emailError.value = '';
     } else {
-      emailError.value = 'Неверный адрес электронной почты';
+      emailError.value = 'Электрондық пошта мекенжайы дұрыс емес';
     }
   }
 
   void validateConfirmPassword(String confirmPassword) {
     if (confirmPassword != user.password) {
-      confirmPasswordError.value = 'Пароли не совпадают';
+      confirmPasswordError.value = 'Құпия сөздер бірдей емес';
     } else {
       confirmPasswordError.value = '';
     }
@@ -40,9 +40,9 @@ class RegisterController extends GetxController {
     if (isRegistered) {
       Get.dialog(
         CustomAlert(
-          title: 'Поздравляем',
-          description: 'Вы завершили регистрацию!',
-          buttonText: 'Звучит хорошо!',
+          title: 'Құттықтаймыз',
+          description: 'Сіз тіркеуді аяқтадыңыз!',
+          buttonText: 'Жақсы естіледі!',
           image: AnimationManager.success,
           isAnimated: true,
           onButtonTap: () => Get.offAllNamed(RouteNames.home),
@@ -52,9 +52,9 @@ class RegisterController extends GetxController {
     } else {
       Get.dialog(
         const CustomAlert(
-          title: 'Ошибка!',
-          description: 'Что-то не так при попытке регистрации!',
-          buttonText: 'Попробуйте еще раз',
+          title: 'Қате!',
+          description: 'Тіркелу кезінде бірдеңе дұрыс емес!',
+          buttonText: 'Қайталап көріңіз',
           image: AnimationManager.error,
           isAnimated: true,
         ),

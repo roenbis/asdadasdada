@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/bookmark_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_app_bar.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
+import 'package:qazquery/controllers/bookmark_controller.dart';
+import 'package:qazquery/global_widgets/custom_app_bar.dart';
+import 'package:qazquery/routes/route_names.dart';
 import '../../utils/colors.dart';
 import '../../utils/themes.dart';
 
@@ -30,7 +30,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
         final bookmarks = controller.bookmarks;
         return bookmarks.isEmpty
             ? const Center(
-                child: Text("У вас нет избранного-урока"),
+                child: Text("Сізде таңдаулы сабақ жоқ"),
               )
             : ListView.builder(
                 padding: const EdgeInsets.all(15),
@@ -86,7 +86,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Урок: ${data['title']}',
+                            'Сабақ: ${data['title']}',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black.withOpacity(.5),

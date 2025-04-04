@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/global_widgets/in_app_bar.dart';
-import 'package:interactive_cares_lms/views/LearningScreen/widgets/header_section.dart';
-import 'package:interactive_cares_lms/views/LearningScreen/widgets/instructor_section.dart';
-import 'package:interactive_cares_lms/views/LearningScreen/widgets/modules_section.dart';
+import 'package:qazquery/global_widgets/in_app_bar.dart';
+import 'package:qazquery/views/LearningScreen/widgets/header_section.dart';
+import 'package:qazquery/views/LearningScreen/widgets/instructor_section.dart';
+import 'package:qazquery/views/LearningScreen/widgets/modules_section.dart';
 
 class LearningScreen extends StatelessWidget {
   const LearningScreen({super.key});
@@ -12,7 +12,7 @@ class LearningScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final arg = Get.arguments;
     return Scaffold(
-      appBar: inAppBar('Подробности курса'),
+      appBar: inAppBar('Курстың егжей-тегжейлері'),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: SingleChildScrollView(

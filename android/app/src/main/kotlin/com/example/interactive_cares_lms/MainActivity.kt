@@ -1,4 +1,4 @@
-package com.example.interactive_cares_lms
+package com.example.qazquery
 
 import io.flutter.embedding.android.FlutterActivity
 

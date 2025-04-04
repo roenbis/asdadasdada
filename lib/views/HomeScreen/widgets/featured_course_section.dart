@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/controllers/home_controller.dart';
-import 'package:interactive_cares_lms/utils/colors.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/controllers/home_controller.dart';
+import 'package:qazquery/utils/colors.dart';
+import 'package:qazquery/utils/themes.dart';
 
 class FeaturedCourseSection extends StatelessWidget {
   const FeaturedCourseSection({super.key});
@@ -19,7 +19,7 @@ class FeaturedCourseSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Популярные курсы',
+              'Танымал курстар',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
@@ -27,7 +27,7 @@ class FeaturedCourseSection extends StatelessWidget {
               ),
             ),
             Text(
-              'Посмотреть все',
+              'Барлығын қарау',
               style: GoogleFonts.poppins(
                 color: AppColors.primary,
               ),
@@ -98,7 +98,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                     ),
                                   ),
                                   TextFormat.extraSmall(
-                                    text: 'На ${data.author}',
+                                    text: 'Авторы ${data.author}',
                                     opacity: .5,
                                   ),
                                   data.salePrice != null
@@ -146,7 +146,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                           color: AppColors.primary,
                                         ),
                                         Text(
-                                          'Добавить в корзину',
+                                          'Себетке қосу',
                                           style: GoogleFonts.poppins(
                                             color: AppColors.primary,
                                           ),

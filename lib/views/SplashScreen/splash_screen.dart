@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/splash_controller.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
+import 'package:qazquery/controllers/splash_controller.dart';
+import 'package:qazquery/utils/assets_manager.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatelessWidget {

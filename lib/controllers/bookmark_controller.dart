@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,7 +29,7 @@ class BookmarkController extends GetxController {
 
     bookmarks.value = updatedBookmarks;
     update();
-    Get.snackbar('Удалено', 'Избранное успешно удалена');
+    Get.snackbar('Жойылды', 'Таңдаулылар сәтті жойылды');
     bookmarks.refresh();
   }
 }

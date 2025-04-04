@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_cares_lms/views/HomeScreen/widgets/category_section.dart';
-import 'package:interactive_cares_lms/views/HomeScreen/widgets/featured_course_section.dart';
-import 'package:interactive_cares_lms/views/HomeScreen/widgets/home_app_bar.dart';
-import 'package:interactive_cares_lms/views/HomeScreen/widgets/leatest_courses_section.dart';
-import 'package:interactive_cares_lms/views/HomeScreen/widgets/slider_section.dart';
+import 'package:qazquery/views/HomeScreen/widgets/category_section.dart';
+import 'package:qazquery/views/HomeScreen/widgets/featured_course_section.dart';
+import 'package:qazquery/views/HomeScreen/widgets/home_app_bar.dart';
+import 'package:qazquery/views/HomeScreen/widgets/leatest_courses_section.dart';
+import 'package:qazquery/views/HomeScreen/widgets/slider_section.dart';
 import '../../utils/colors.dart';
 
 class HomeScreen extends StatelessWidget {

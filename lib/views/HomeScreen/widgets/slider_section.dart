@@ -1,7 +1,7 @@
 // import 'package:carousel_slider/carousel_slider.dart' as custom;
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
-// import 'package:interactive_cares_lms/controllers/home_controller.dart';
+// import 'package:qazquery/controllers/home_controller.dart';
 // import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
 // import '../../../utils/colors.dart';

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/core/services/shared_services.dart';
+import 'package:qazquery/core/services/shared_services.dart';
 
 class SplashController extends GetxController {
   @override

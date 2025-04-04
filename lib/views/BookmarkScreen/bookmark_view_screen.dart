@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/controllers/bookmark_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_button.dart';
-import 'package:interactive_cares_lms/global_widgets/in_app_bar.dart';
-import 'package:interactive_cares_lms/global_widgets/video_player.dart';
+import 'package:qazquery/controllers/bookmark_controller.dart';
+import 'package:qazquery/global_widgets/custom_button.dart';
+import 'package:qazquery/global_widgets/in_app_bar.dart';
+import 'package:qazquery/global_widgets/video_player.dart';
 import 'package:video_player/video_player.dart';
 
 class BookmarkPlayerScreen extends StatelessWidget {
@@ -27,7 +27,7 @@ class BookmarkPlayerScreen extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final arg = Get.arguments as Map;
     return Scaffold(
-      appBar: inAppBar('Проигрыватель избранного'),
+      appBar: inAppBar('Таңдаулы ойнатқыш'),
       body: GetBuilder<BookmarkController>(builder: (controller) {
         return Padding(
           padding: const EdgeInsets.all(15),
@@ -88,7 +88,7 @@ class BookmarkPlayerScreen extends StatelessWidget {
                 ],
               ),
               CustomButton(
-                buttonTitle: 'Удалить Избранное',
+                buttonTitle: 'Таңдаулыларды Жою',
                 onTap: () {
                   controller.deleteBookmark(arg['index']);
                   Get.back();

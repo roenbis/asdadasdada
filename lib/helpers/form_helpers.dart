@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/utils/themes.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
@@ -54,12 +54,12 @@ class CustomTextField extends StatelessWidget {
           validator: isRequired == true
               ? (value) {
                   if (value!.isEmpty) {
-                    return 'Это поле обязательно для заполнения';
+                    return 'Бұл өрісті толтыру қажет';
                   }
 
                   if (isLogin != true) {
                     if (value.length < 8) {
-                      return 'Пароль должен состоять не менее чем из 8 символов';
+                      return 'Құпия сөз кем дегенде 8 таңбадан тұруы керек';
                     }
                   }
                   return null;

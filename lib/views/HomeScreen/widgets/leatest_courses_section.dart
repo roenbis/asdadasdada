@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/controllers/home_controller.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/controllers/home_controller.dart';
+import 'package:qazquery/utils/themes.dart';
 import '../../../utils/colors.dart';
 
 class LatestCoursesSection extends StatelessWidget {
@@ -22,7 +22,7 @@ class LatestCoursesSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Последние курсы',
+              'Соңғы курстар',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
@@ -30,7 +30,7 @@ class LatestCoursesSection extends StatelessWidget {
               ),
             ),
             Text(
-              'Посмотреть все',
+              'Барлығын қарау',
               style: GoogleFonts.poppins(
                 color: AppColors.primary,
               ),
@@ -64,7 +64,7 @@ class LatestCoursesSection extends StatelessWidget {
                             topRight: Radius.circular(15),
                           ),
                           child: FadeInImage.assetNetwork(
-                            placeholder: 'assets/images/logo.webp',
+                            placeholder: 'assets/images/logo.png',
                             image: data.thumbnail,
                             height: 120,
                             width: double.infinity,
@@ -124,7 +124,7 @@ class LatestCoursesSection extends StatelessWidget {
                                   horizontal: 15,
                                   vertical: 10,
                                 ),
-                                child: Text("Купить сейчас"),
+                                child: Text("Қазір сатып алу"),
                               ),
                             ),
                           )

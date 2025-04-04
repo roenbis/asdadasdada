@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/bottom_bar_controller.dart';
-import 'package:interactive_cares_lms/controllers/course_controller.dart';
-import 'package:interactive_cares_lms/controllers/home_controller.dart';
-import 'package:interactive_cares_lms/controllers/login_controller.dart';
-import 'package:interactive_cares_lms/controllers/register_controller.dart';
-
+import 'package:qazquery/controllers/bottom_bar_controller.dart';
+import 'package:qazquery/controllers/course_controller.dart';
+import 'package:qazquery/controllers/home_controller.dart';
+import 'package:qazquery/controllers/login_controller.dart';
+import 'package:qazquery/controllers/register_controller.dart';
 
 class AllBindings extends Bindings {
   @override
@@ -15,5 +14,4 @@ class AllBindings extends Bindings {
     Get.lazyPut(() => LoginController());
     Get.lazyPut(() => RegisterController());
   }
-
 }

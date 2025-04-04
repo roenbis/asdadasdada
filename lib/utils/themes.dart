@@ -12,7 +12,7 @@ class TextFormat {
     return Text(
       text,
       textAlign: textAlign ?? TextAlign.center,
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.roboto(
         fontSize: 22,
         color: textColor ?? Colors.black.withOpacity(opacity ?? 1),
         fontWeight: fontWeight ?? FontWeight.w800,
@@ -34,7 +34,7 @@ class TextFormat {
       child: Text(
         text,
         textAlign: textAlign ?? TextAlign.center,
-        style: GoogleFonts.poppins(
+        style: GoogleFonts.roboto(
           fontSize: 16,
           color: textColor ?? Colors.black.withOpacity(opacity ?? 1),
           fontWeight: fontWeight,
@@ -54,7 +54,7 @@ class TextFormat {
     return Text(
       text,
       textAlign: textAlign ?? TextAlign.center,
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.roboto(
         fontSize: 12,
         color: textColor ?? Colors.black.withOpacity(opacity ?? 1),
         fontWeight: fontWeight,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:interactive_cares_lms/helpers/auth_helper.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/helpers/auth_helper.dart';
+import 'package:qazquery/utils/assets_manager.dart';
+import 'package:qazquery/utils/themes.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -22,13 +22,13 @@ class HomeAppBar extends StatelessWidget {
                   future: AuthHelper.getName(),
                   builder: (context, snapshot) {
                     return TextFormat.bold(
-                      text: 'Привет ${snapshot.data ?? 'User'},',
+                      text: 'Сәлем ${snapshot.data ?? 'User'},',
                       textColor: Colors.white,
                     );
                   },
                 ),
                 TextFormat.small(
-                  text: "Начинаем учиться",
+                  text: "Оқуды бастаймыз",
                   fontWeight: FontWeight.w300,
                   textColor: Colors.white,
                 ),

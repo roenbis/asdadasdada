@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/login_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_button.dart';
-import 'package:interactive_cares_lms/helpers/form_helpers.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/controllers/login_controller.dart';
+import 'package:qazquery/global_widgets/custom_button.dart';
+import 'package:qazquery/helpers/form_helpers.dart';
+import 'package:qazquery/routes/route_names.dart';
+import 'package:qazquery/utils/assets_manager.dart';
+import 'package:qazquery/utils/themes.dart';
 import '../../../utils/colors.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -28,9 +28,9 @@ class LoginScreen extends StatelessWidget {
                   Column(
                     children: [
                       Image.asset(ImageManager.logo),
-                      TextFormat.bold(text: 'С возвращением!'),
+                      TextFormat.bold(text: 'Оралуыңызбен!'),
                       TextFormat.small(
-                        text: 'Войдите, чтобы продолжить',
+                        text: 'Жалғастыру үшін жүйеге кіріңіз',
                         textColor: Colors.black.withOpacity(.5),
                       ),
                     ],
@@ -47,13 +47,13 @@ class LoginScreen extends StatelessWidget {
                               children: [
                                 CustomTextField(
                                   topLabelText: 'Email',
-                                  hintText: 'Введите свой e-mail',
+                                  hintText: 'Электрондық поштаңызды енгізіңіз',
                                   prefixIcon: Icons.alternate_email,
                                   isRequired: true,
-                                  errorText:
-                                      controller.emailError.value.isNotEmpty
-                                          ? 'Неверный адрес электронной почты'
-                                          : null,
+                                  errorText: controller
+                                          .emailError.value.isNotEmpty
+                                      ? 'Электрондық пошта мекенжайы дұрыс емес'
+                                      : null,
                                   onChanged: (email) {
                                     controller.user.email = email;
                                     controller.validateEmail(email);
@@ -63,8 +63,8 @@ class LoginScreen extends StatelessWidget {
                                   height: 15,
                                 ),
                                 CustomTextField(
-                                  topLabelText: 'Пароль',
-                                  hintText: 'Введите пароль учетной записи',
+                                  topLabelText: 'Құпия сөз',
+                                  hintText: 'Тіркелгі құпия сөзін енгізіңіз',
                                   prefixIcon: Icons.password,
                                   isRequired: true,
                                   isSecured: true,
@@ -82,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               TextFormat.small(
-                                text: 'Забыли пароль?',
+                                text: 'Құпия сөзді ұмыттыңыз ба?',
                                 opacity: 0.5,
                               )
                             ],
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           CustomButton(
                             isLoading: controller.isLoading.value,
-                            buttonTitle: 'Войти',
+                            buttonTitle: 'Кіру',
                             onTap: () {
                               // if (controller.globalKey.currentState!.validate()) {
                               //   controller.login();
@@ -108,7 +108,7 @@ class LoginScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextFormat.small(
-                                text: "Нет аккаунта?",
+                                text: "Тіркелгіңіз жоқпа?",
                                 opacity: 0.5,
                               ),
                               const SizedBox(

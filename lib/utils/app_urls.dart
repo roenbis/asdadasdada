@@ -1,4 +1,4 @@
-import 'package:interactive_cares_lms/utils/config.dart';
+import 'package:qazquery/utils/config.dart';
 
 class AppUrls {
   static const String apiVersion = 'v1';

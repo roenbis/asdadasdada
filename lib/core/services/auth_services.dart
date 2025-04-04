@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:interactive_cares_lms/helpers/request_helpers.dart';
-import 'package:interactive_cares_lms/models/user_model.dart';
-import 'package:interactive_cares_lms/utils/app_urls.dart';
+import 'package:qazquery/helpers/request_helpers.dart';
+import 'package:qazquery/models/user_model.dart';
+import 'package:qazquery/utils/app_urls.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../global_widgets/custom_alert.dart';

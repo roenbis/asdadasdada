@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
+import 'package:qazquery/routes/route_names.dart';
 import '../core/services/auth_services.dart';
 import '../models/user_model.dart';
 
@@ -17,7 +17,7 @@ class LoginController extends GetxController {
     if (regex.hasMatch(email)) {
       emailError.value = '';
     } else {
-      emailError.value = 'Неверный адрес электронной почты';
+      emailError.value = 'Электрондық пошта мекенжайы дұрыс емес';
     }
   }
 

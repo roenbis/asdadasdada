@@ -10,7 +10,7 @@ class CategoryModel {
 List<CategoryModel> getCategories = [
   CategoryModel(title: 'Вебсайт', icon: ImageManager.web),
   CategoryModel(title: 'Графика', icon: ImageManager.graphic),
-  CategoryModel(title: 'Монтирование', icon: ImageManager.video),
-  CategoryModel(title: 'Разработка', icon: ImageManager.personalDevelopment),
+  CategoryModel(title: 'Бейне-өңдеу', icon: ImageManager.video),
+  CategoryModel(title: 'Бағдарлама', icon: ImageManager.personalDevelopment),
   CategoryModel(title: 'Математика', icon: ImageManager.math),
 ];

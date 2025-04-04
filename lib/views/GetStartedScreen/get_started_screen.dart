@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_button.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/global_widgets/custom_button.dart';
+import 'package:qazquery/routes/route_names.dart';
+import 'package:qazquery/utils/assets_manager.dart';
+import 'package:qazquery/utils/themes.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -25,14 +25,14 @@ class GetStartedScreen extends StatelessWidget {
               Column(
                 children: [
                   TextFormat.bold(
-                    text: 'Создайте свой собственный\n учебный план',
+                    text: 'Өзіңіздің\n оқу жоспарыңызды жасаңыз',
                   ),
                   const SizedBox(
                     height: 10,
                   ),
                   TextFormat.small(
                     text:
-                        'Занимайтесь по учебному плану, \nповышайте мотивацию к учебе.',
+                        'Оқу жоспарымен айналысыңыз, \nоқуға деген ынтаны арттырыңыз.',
                     opacity: 0.5,
                   ),
                 ],
@@ -50,7 +50,7 @@ class GetStartedScreen extends StatelessWidget {
                   // ),
                   Expanded(
                     child: CustomButton(
-                      buttonTitle: 'Войти',
+                      buttonTitle: 'Кіру',
                       isBorder: true,
                       onTap: () => Get.toNamed(RouteNames.login),
                     ),

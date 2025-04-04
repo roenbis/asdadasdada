@@ -1,4 +1,4 @@
-import 'package:interactive_cares_lms/utils/config.dart';
+import 'package:qazquery/utils/config.dart';
 
 class CourseModel {
   String title;
@@ -57,7 +57,7 @@ class Lessons {
 List<CourseModel> getFeaturedCourse = [
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'JavaScript для начинающих',
+    title: 'Жаңадан бастаушыларға арналған JavaScript',
     thumbnail:
         'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg?tx=w_1920,q_auto',
     salePrice: 2000,
@@ -68,18 +68,18 @@ List<CourseModel> getFeaturedCourse = [
     completedValue: 0.6,
     topics: [
       Topics(
-        title: 'Модуль 01: Введение в JavaScript',
+        title: 'Модуль 01: JavaScript-ке кіріспе',
         totalDuration: '00:25:30',
         totalLesson: 2,
         lesson: [
           Lessons(
-            title: 'Введение в JavaScript',
+            title: 'JavaScript-ке кіріспе',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:53',
             isComplete: false,
           ),
           Lessons(
-            title: 'Установка и конфигурация JavaScript',
+            title: 'JavaScript орнату және конфигурациялау',
             lessonUrl: 'assets/videos/seo.mp4',
             duration: '00:05:29',
             isComplete: false,
@@ -87,12 +87,12 @@ List<CourseModel> getFeaturedCourse = [
         ],
       ),
       Topics(
-        title: 'Модуль 02: Основы JavaScript',
+        title: 'Модуль 02: JavaScript Негіздері',
         totalDuration: '00:06:35',
         totalLesson: 1,
         lesson: [
           Lessons(
-            title: 'Основы JavaScript',
+            title: 'JavaScript Негіздері',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:35',
             isComplete: false,
@@ -103,7 +103,7 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/seo.mp4',
-    title: 'SQL для начинающих',
+    title: 'Жаңадан бастаушыларға арналған SQL',
     thumbnail:
         'https://www.techmonitor.ai/wp-content/uploads/sites/29/2016/06/SQL.png',
     regularPrice: 12500,
@@ -113,18 +113,18 @@ List<CourseModel> getFeaturedCourse = [
     completedValue: 0.95,
     topics: [
       Topics(
-        title: 'Модуль 01: Введение в SQL',
+        title: 'Модуль 01: SQL-ге кіріспе',
         totalDuration: '00:12:09',
         totalLesson: 2,
         lesson: [
           Lessons(
-            title: 'Введение в SQL',
+            title: 'SQL-ге кіріспе',
             lessonUrl: 'assets/videos/seo.mp4',
             duration: '00:05:25',
             isComplete: false,
           ),
           Lessons(
-            title: 'Установка и конфигурация SQL',
+            title: 'SQL орнату және конфигурация',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:43',
             isComplete: false,
@@ -135,7 +135,7 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Python для начинающих',
+    title: 'Жаңадан бастаушыларға арналған Python',
     thumbnail:
         'https://aiit-sa.co.za/wp-content/uploads/2023/08/Python-Symbol.png',
     regularPrice: 2000,
@@ -147,7 +147,7 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'PHP для начинающих',
+    title: 'Жаңадан бастаушыларға арналған PHP',
     thumbnail: 'https://www.sectorlink.com/img/blog/php-web-development.jpg',
     salePrice: 2000,
     regularPrice: 1000,

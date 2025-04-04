@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interactive_cares_lms/controllers/course_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_button.dart';
-import 'package:interactive_cares_lms/global_widgets/in_app_bar.dart';
-import 'package:interactive_cares_lms/global_widgets/video_player.dart';
-import 'package:interactive_cares_lms/models/course_model.dart';
-import 'package:interactive_cares_lms/views/LearningScreen/widgets/lesson_info_widget.dart';
+import 'package:qazquery/controllers/course_controller.dart';
+import 'package:qazquery/global_widgets/custom_button.dart';
+import 'package:qazquery/global_widgets/in_app_bar.dart';
+import 'package:qazquery/global_widgets/video_player.dart';
+import 'package:qazquery/models/course_model.dart';
+import 'package:qazquery/views/LearningScreen/widgets/lesson_info_widget.dart';
 import 'package:video_player/video_player.dart';
 
 class LessonScreen extends StatelessWidget {
@@ -106,14 +106,14 @@ class LessonScreen extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Тип',
-                                  subtitle: 'Видео',
+                                  title: 'Түрі',
+                                  subtitle: 'Бейне',
                                   icon: Icons.file_present_sharp,
                                 ),
                               ),
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Размер',
+                                  title: 'Өлшемі',
                                   subtitle: '3.95 MB',
                                   icon: Icons.font_download_rounded,
                                 ),
@@ -125,15 +125,15 @@ class LessonScreen extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Опубликовать',
-                                  subtitle: '24 Мар 2025',
+                                  title: 'Жариялау',
+                                  subtitle: '24 Нау 2025',
                                   icon: Icons.date_range_sharp,
                                 ),
                               ),
                               Expanded(
                                 child: LessonInfoWidget(
-                                  title: 'Скачать',
-                                  subtitle: 'Нет',
+                                  title: 'Жүктеу',
+                                  subtitle: 'Жоқ',
                                   icon: Icons.download_for_offline,
                                 ),
                               ),
@@ -151,7 +151,7 @@ class LessonScreen extends StatelessWidget {
                     children: [
                       Expanded(
                           child: CustomButton(
-                        buttonTitle: 'Предыдущий урок',
+                        buttonTitle: 'Алдыңғы сабақ',
                         isBorder: true,
                         onTap: () {
                           controller.previousLesson();
@@ -162,7 +162,7 @@ class LessonScreen extends StatelessWidget {
                       ),
                       Expanded(
                           child: CustomButton(
-                        buttonTitle: 'Следующий урок',
+                        buttonTitle: 'Келесі сабақ',
                         isBorder: true,
                         onTap: () {
                           controller.nextLesson(lessons);
@@ -176,10 +176,10 @@ class LessonScreen extends StatelessWidget {
                   CustomButton(
                     buttonTitle:
                         controller.allLessonsCompleted(lessons, course.topics)
-                            ? 'Получить сертификат'
+                            ? 'Сертификат алыңыз'
                             : lesson.isComplete
-                                ? 'Завершено'
-                                : 'Законченный урок',
+                                ? 'Аяқталды'
+                                : 'Аяқталған сабақ',
                     onTap: () =>
                         controller.allLessonsCompleted(lessons, course.topics)
                             ? null

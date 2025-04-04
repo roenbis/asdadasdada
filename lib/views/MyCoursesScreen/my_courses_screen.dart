@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/course_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_app_bar.dart';
+import 'package:qazquery/controllers/course_controller.dart';
+import 'package:qazquery/global_widgets/custom_app_bar.dart';
 import 'widgets/my_course_grid.dart';
 
 class MyCoursesScreen extends StatelessWidget {

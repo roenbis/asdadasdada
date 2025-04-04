@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/models/course_model.dart';
+import 'package:qazquery/models/course_model.dart';
 
 class LessonController extends GetxController {
   var currentLessonIndex = 0.obs;
@@ -21,5 +21,4 @@ class LessonController extends GetxController {
   final List<Lessons> lessons;
 
   LessonController({required this.lessons});
-
 }

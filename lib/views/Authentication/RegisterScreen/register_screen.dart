@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/register_controller.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_button.dart';
-import 'package:interactive_cares_lms/helpers/form_helpers.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
-import 'package:interactive_cares_lms/utils/themes.dart';
+import 'package:qazquery/controllers/register_controller.dart';
+import 'package:qazquery/global_widgets/custom_button.dart';
+import 'package:qazquery/helpers/form_helpers.dart';
+import 'package:qazquery/routes/route_names.dart';
+import 'package:qazquery/utils/themes.dart';
 import '../../../utils/colors.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -26,9 +26,9 @@ class RegisterScreen extends StatelessWidget {
                   // Header Section
                   Column(
                     children: [
-                      TextFormat.bold(text: 'Register Now!'),
+                      TextFormat.bold(text: 'Қазір Тіркеліңіз!'),
                       TextFormat.small(
-                        text: 'Fill the details below',
+                        text: 'Төмендегі мәліметтерді толтырыңыз',
                         textColor: Colors.black.withOpacity(.5),
                       ),
                     ],
@@ -45,28 +45,30 @@ class RegisterScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 CustomTextField(
-                                  topLabelText: 'Full Name',
-                                  hintText: 'Enter your full name',
+                                  topLabelText: 'Толық Аты-Жөні',
+                                  hintText: 'Толық аты-жөніңізді енгізіңіз',
                                   prefixIcon: Icons.person_rounded,
                                   isRequired: true,
-                                  onChanged: (p0) => controller.user.fullName = p0,
+                                  onChanged: (p0) =>
+                                      controller.user.fullName = p0,
                                 ),
                                 const SizedBox(
                                   height: 15,
                                 ),
                                 CustomTextField(
-                                  topLabelText: 'Username',
-                                  hintText: 'Enter your username',
+                                  topLabelText: 'Пайдаланушы аты',
+                                  hintText: 'Пайдаланушы атыңызды енгізіңіз',
                                   prefixIcon: Icons.alternate_email,
                                   isRequired: true,
-                                  onChanged: (p0) => controller.user.username = p0,
+                                  onChanged: (p0) =>
+                                      controller.user.username = p0,
                                 ),
                                 const SizedBox(
                                   height: 15,
                                 ),
                                 CustomTextField(
-                                  topLabelText: 'Your Email',
-                                  hintText: 'Enter your email',
+                                  topLabelText: 'Сіздің Электрондық Поштаңыз',
+                                  hintText: 'Электрондық поштаңызды енгізіңіз',
                                   prefixIcon: Icons.email_rounded,
                                   isRequired: true,
                                   onChanged: (username) {
@@ -77,25 +79,27 @@ class RegisterScreen extends StatelessWidget {
                                   height: 15,
                                 ),
                                 CustomTextField(
-                                  topLabelText: 'Password',
-                                  hintText: 'Enter account password',
+                                  topLabelText: 'Пароль',
+                                  hintText:
+                                      'Есептік жазбаның паролін енгізіңіз',
                                   prefixIcon: Icons.password,
                                   isRequired: true,
                                   isSecured: true,
-                                  onChanged: (p0) => controller.user.password = p0,
+                                  onChanged: (p0) =>
+                                      controller.user.password = p0,
                                 ),
                                 const SizedBox(
                                   height: 15,
                                 ),
                                 CustomTextField(
-                                  topLabelText: 'Confirm Password',
-                                  hintText: 'Re-type your password',
+                                  topLabelText: 'Құпия Сөзді Растау',
+                                  hintText: 'Құпия сөзді қайта теріңіз',
                                   prefixIcon: Icons.password,
                                   isRequired: true,
                                   isSecured: true,
                                   errorText: controller
                                           .confirmPasswordError.value.isNotEmpty
-                                      ? 'Password mismatched'
+                                      ? 'Құпия сөз сәйкес келмеді'
                                       : null,
                                   onChanged: (p0) {
                                     controller.validateConfirmPassword(p0);
@@ -111,7 +115,7 @@ class RegisterScreen extends StatelessWidget {
                           // Login Button
                           CustomButton(
                             isLoading: controller.isLoading.value,
-                            buttonTitle: 'Sign Up',
+                            buttonTitle: 'Тіркелу',
                             onTap: () {
                               // Check the form is valid or not
                               if (controller.globalKey.currentState!
@@ -133,14 +137,14 @@ class RegisterScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextFormat.small(
-                                text: "Already have an account?",
+                                text: "Есептік жазбаңыз бар ма?",
                                 opacity: 0.5,
                               ),
                               const SizedBox(
                                 width: 5,
                               ),
                               TextFormat.small(
-                                text: "Log In",
+                                text: "Кіру",
                                 textColor: AppColors.primary,
                                 fontWeight: FontWeight.w600,
                                 onTap: () => Get.toNamed(RouteNames.login),

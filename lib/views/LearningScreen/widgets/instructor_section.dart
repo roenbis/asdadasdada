@@ -16,13 +16,13 @@ class InstructorSection extends StatelessWidget {
         leading: CircleAvatar(
           backgroundColor: AppColors.primary,
           child: const Text(
-            'IC',
+            'QQ',
             style: TextStyle(
               color: Colors.white,
             ),
           ),
         ),
-        title: const Text('Lorem Ipsum'),
+        title: const Text('Qaz Query'),
         subtitle: StarDisplayWidget(
           value: 4,
           filledStar: Icon(

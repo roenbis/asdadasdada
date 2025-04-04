@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/global_widgets/custom_alert.dart';
-import 'package:interactive_cares_lms/routes/route_names.dart';
-import 'package:interactive_cares_lms/utils/assets_manager.dart';
+import 'package:qazquery/global_widgets/custom_alert.dart';
+import 'package:qazquery/routes/route_names.dart';
+import 'package:qazquery/utils/assets_manager.dart';
 import '../models/course_model.dart';
 
 class CourseController extends GetxController {
@@ -40,9 +40,9 @@ class CourseController extends GetxController {
     if (allLessonsCompleted(lessons, course.topics)) {
       Get.dialog(
         CustomAlert(
-          title: 'Поздравляем!',
-          description: 'Вы завершили "${course.title}" курс успешно',
-          buttonText: 'Получить сертификат',
+          title: 'Құттықтаймыз!',
+          description: 'Сіз курсты "${course.title}" сәтті аяқтадыңыз',
+          buttonText: 'Сертификат алыңыз',
           image: AnimationManager.success,
           isAnimated: true,
           onButtonTap: () => Get.offAllNamed(RouteNames.home),

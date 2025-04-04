@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:interactive_cares_lms/controllers/bottom_bar_controller.dart';
+import 'package:qazquery/controllers/bottom_bar_controller.dart';
 
 class BottomBarView extends StatelessWidget {
   const BottomBarView({super.key});
@@ -16,15 +16,15 @@ class BottomBarView extends StatelessWidget {
               items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
-                  label: 'Главная',
+                  label: 'Басты бет',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.book),
-                  label: 'Избранное',
+                  label: 'Таңдаулылар',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.co_present_outlined),
-                  label: 'Мой курсы',
+                  label: 'Менің курстарым',
                 ),
               ]),
         ));
