@@ -33,7 +33,7 @@ class HeaderSection extends StatelessWidget {
               children: [
                 Text(
                   arg.title,
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w500, fontSize: 16),
                 ),
                 const SizedBox(

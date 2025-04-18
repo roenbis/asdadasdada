@@ -39,15 +39,15 @@ class GetStartedScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  // Expanded(
-                  //   child: CustomButton(
-                  //     buttonTitle: 'Sign up',
-                  //     onTap: () => Get.toNamed(RouteNames.register),
-                  //   ),
-                  // ),
-                  // const SizedBox(
-                  //   width: 10,
-                  // ),
+                  Expanded(
+                    child: CustomButton(
+                      buttonTitle: 'Тіркелу',
+                      onTap: () => Get.toNamed(RouteNames.register),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Expanded(
                     child: CustomButton(
                       buttonTitle: 'Кіру',

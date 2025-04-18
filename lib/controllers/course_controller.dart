@@ -80,4 +80,9 @@ class CourseController extends GetxController {
     overallCourseProgress.value = progress;
     return progress;
   }
+
+  void markTaskSolved(Lessons lesson, int index) {
+    lesson.practiceTasks![index].isSolved = true;
+    update();
+  }
 }

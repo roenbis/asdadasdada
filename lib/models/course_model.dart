@@ -45,21 +45,35 @@ class Lessons {
   String lessonUrl;
   String duration;
   bool isComplete;
+  List<PracticeTask>? practiceTasks;
 
   Lessons({
     required this.title,
     required this.lessonUrl,
     required this.duration,
     required this.isComplete,
+    this.practiceTasks,
+  });
+}
+
+class PracticeTask {
+  String question;
+  String hint;
+  bool isSolved;
+
+  PracticeTask({
+    required this.question,
+    required this.hint,
+    this.isSolved = false,
   });
 }
 
 List<CourseModel> getFeaturedCourse = [
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Жаңадан бастаушыларға арналған JavaScript',
+    title: 'Жаңадан бастаушыларға арналған SQL',
     thumbnail:
-        'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg?tx=w_1920,q_auto',
+        'https://www.techmonitor.ai/wp-content/uploads/sites/29/2016/06/SQL.png',
     salePrice: 2000,
     regularPrice: 1000,
     author: AppConfig.appName,
@@ -68,33 +82,26 @@ List<CourseModel> getFeaturedCourse = [
     completedValue: 0.6,
     topics: [
       Topics(
-        title: 'Модуль 01: JavaScript-ке кіріспе',
-        totalDuration: '00:25:30',
+        title: 'Модуль 01: SQL негіздері',
+        totalDuration: '00:20:00',
         totalLesson: 2,
         lesson: [
           Lessons(
-            title: 'JavaScript-ке кіріспе',
+            title: 'SQL деген не?',
             lessonUrl: 'assets/videos/flutter.mp4',
-            duration: '00:06:53',
+            duration: '00:08:00',
             isComplete: false,
+            practiceTasks: [
+              PracticeTask(
+                  question:
+                      'SELECT сұранысын қолданып, барлық деректерді шығарыңыз.',
+                  hint: 'SELECT * FROM table_name;'),
+            ],
           ),
           Lessons(
-            title: 'JavaScript орнату және конфигурациялау',
-            lessonUrl: 'assets/videos/seo.mp4',
-            duration: '00:05:29',
-            isComplete: false,
-          ),
-        ],
-      ),
-      Topics(
-        title: 'Модуль 02: JavaScript Негіздері',
-        totalDuration: '00:06:35',
-        totalLesson: 1,
-        lesson: [
-          Lessons(
-            title: 'JavaScript Негіздері',
-            lessonUrl: 'assets/videos/flutter.mp4',
-            duration: '00:06:35',
+            title: 'Таблицалармен жұмыс',
+            lessonUrl: 'assets/videos/sql.mp4',
+            duration: '00:12:00',
             isComplete: false,
           ),
         ],
@@ -103,9 +110,9 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/seo.mp4',
-    title: 'Жаңадан бастаушыларға арналған SQL',
+    title: 'Орташа деңгейге арналған PostgreSQL',
     thumbnail:
-        'https://www.techmonitor.ai/wp-content/uploads/sites/29/2016/06/SQL.png',
+        'https://bairesdev.mo.cloudinary.net/blog/2023/12/What-is-PostgreSQL.jpg?tx=w_1512,q_auto',
     regularPrice: 12500,
     author: AppConfig.appName,
     rating: 4,
@@ -113,21 +120,40 @@ List<CourseModel> getFeaturedCourse = [
     completedValue: 0.95,
     topics: [
       Topics(
-        title: 'Модуль 01: SQL-ге кіріспе',
+        title: 'Модуль 01: PostgreSQL-ге шолу',
         totalDuration: '00:12:09',
         totalLesson: 2,
         lesson: [
           Lessons(
-            title: 'SQL-ге кіріспе',
+            title: 'PostgreSQL орнату және конфигурациялау',
             lessonUrl: 'assets/videos/seo.mp4',
             duration: '00:05:25',
             isComplete: false,
           ),
           Lessons(
-            title: 'SQL орнату және конфигурация',
+            title: 'Бастапқы сұраныстар',
             lessonUrl: 'assets/videos/flutter.mp4',
             duration: '00:06:43',
             isComplete: false,
+          ),
+        ],
+      ),
+      Topics(
+        title: 'Модуль 02: Жетілдірілген сұраныстар',
+        totalDuration: '00:10:00',
+        totalLesson: 1,
+        lesson: [
+          Lessons(
+            title: 'JOIN, GROUP BY, ORDER BY',
+            lessonUrl: 'assets/videos/postgres.mp4',
+            duration: '00:10:00',
+            isComplete: false,
+            practiceTasks: [
+              PracticeTask(
+                  question:
+                      'Қосылған екі таблицадан деректерді алу үшін INNER JOIN қолданыңыз.',
+                  hint: 'SELECT ... FROM table1 INNER JOIN table2 ...'),
+            ],
           ),
         ],
       ),
@@ -135,25 +161,97 @@ List<CourseModel> getFeaturedCourse = [
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Жаңадан бастаушыларға арналған Python',
+    title: 'Орташа деңгейге арналған MongoDB',
     thumbnail:
-        'https://aiit-sa.co.za/wp-content/uploads/2023/08/Python-Symbol.png',
+        'https://2024.allthingsopen.org/wp-content/uploads/2024/05/Gold_MongoDB_FG.jpg',
     regularPrice: 2000,
     salePrice: 1000,
     author: AppConfig.appName,
-    rating: 1,
+    rating: 3,
     completed: 90,
     completedValue: 0.9,
+    topics: [
+      Topics(
+        title: 'Модуль 01: MongoDB негіздері',
+        totalDuration: '00:15:00',
+        totalLesson: 2,
+        lesson: [
+          Lessons(
+            title: 'MongoDB деген не және неге ол NoSQL?',
+            lessonUrl: 'assets/videos/flutter.mp4',
+            duration: '00:07:00',
+            isComplete: false,
+          ),
+          Lessons(
+            title: 'Документтермен жұмыс',
+            lessonUrl: 'assets/videos/mongo.mp4',
+            duration: '00:08:00',
+            isComplete: false,
+            practiceTasks: [
+              PracticeTask(
+                  question:
+                      'db.collection.insertOne({...}) арқылы жаңа құжат қосыңыз.',
+                  hint: 'Құжат JSON форматында болуы тиіс.'),
+            ],
+          ),
+        ],
+      ),
+    ],
   ),
   CourseModel(
     promoVide: 'assets/videos/flutter.mp4',
-    title: 'Жаңадан бастаушыларға арналған PHP',
-    thumbnail: 'https://www.sectorlink.com/img/blog/php-web-development.jpg',
+    title: 'Тәжірибелі мамандарға арналған Oracle',
+    thumbnail:
+        'https://1000logos.net/wp-content/uploads/2017/04/Oracle-Logo-1.png',
     salePrice: 2000,
     regularPrice: 1000,
     author: AppConfig.appName,
     rating: 4,
     completed: 90,
     completedValue: 0.9,
+    topics: [
+      Topics(
+        title: 'Модуль 01: Oracle SQL және PL/SQL',
+        totalDuration: '00:18:00',
+        totalLesson: 2,
+        lesson: [
+          Lessons(
+            title: 'PL/SQL кіріспе',
+            lessonUrl: 'assets/videos/oracle1.mp4',
+            duration: '00:08:00',
+            isComplete: false,
+            practiceTasks: [
+              PracticeTask(
+                  question: 'PL/SQL блок жазып, шартты оператор қолдан.',
+                  hint: 'BEGIN ... IF ... THEN ... END;'),
+            ],
+          ),
+          Lessons(
+            title: 'Stored Procedure жасау',
+            lessonUrl: 'assets/videos/oracle2.mp4',
+            duration: '00:10:00',
+            isComplete: false,
+          ),
+        ],
+      ),
+      Topics(
+        title: 'Модуль 02: Транзакциялар және индекстер',
+        totalDuration: '00:10:00',
+        totalLesson: 1,
+        lesson: [
+          Lessons(
+            title: 'Транзакция басқару',
+            lessonUrl: 'assets/videos/oracle3.mp4',
+            duration: '00:10:00',
+            isComplete: false,
+            practiceTasks: [
+              PracticeTask(
+                  question: 'COMMIT және ROLLBACK көмегімен деректерді басқар.',
+                  hint: 'BEGIN TRANSACTION ... COMMIT немесе ROLLBACK'),
+            ],
+          ),
+        ],
+      ),
+    ],
   ),
 ];

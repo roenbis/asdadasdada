@@ -5,7 +5,6 @@ import 'package:qazquery/helpers/request_helpers.dart';
 import 'package:qazquery/models/user_model.dart';
 import 'package:qazquery/utils/app_urls.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../global_widgets/custom_alert.dart';
 import '../../utils/assets_manager.dart';
 

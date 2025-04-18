@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/colors.dart';
 
-PreferredSizeWidget inAppBar (String title) {
+PreferredSizeWidget inAppBar(String title) {
   return AppBar(
     backgroundColor: AppColors.background,
     centerTitle: true,
@@ -12,8 +12,9 @@ PreferredSizeWidget inAppBar (String title) {
       onPressed: () => Get.back(),
       icon: const Icon(Icons.arrow_back_ios_new),
     ),
-    title: Text(title,
-      style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+    title: Text(
+      title,
+      style: GoogleFonts.roboto(fontWeight: FontWeight.w600),
     ),
   );
 }

@@ -20,7 +20,7 @@ class FeaturedCourseSection extends StatelessWidget {
           children: [
             Text(
               'Танымал курстар',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
                 color: Colors.black.withOpacity(.6),
@@ -28,7 +28,7 @@ class FeaturedCourseSection extends StatelessWidget {
             ),
             Text(
               'Барлығын қарау',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 color: AppColors.primary,
               ),
             ),
@@ -147,7 +147,7 @@ class FeaturedCourseSection extends StatelessWidget {
                                         ),
                                         Text(
                                           'Себетке қосу',
-                                          style: GoogleFonts.poppins(
+                                          style: GoogleFonts.roboto(
                                             color: AppColors.primary,
                                           ),
                                         ),

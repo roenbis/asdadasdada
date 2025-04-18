@@ -53,7 +53,7 @@ class LessonScreen extends StatelessWidget {
                         children: [
                           Text(
                             lesson.title,
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.roboto(
                                 fontWeight: FontWeight.w500, fontSize: 16),
                           ),
                           const SizedBox(
@@ -145,6 +145,50 @@ class LessonScreen extends StatelessWidget {
                   )
                 ],
               ),
+              if (lesson.practiceTasks != null &&
+                  lesson.practiceTasks!.isNotEmpty) ...[
+                const SizedBox(height: 20),
+                Container(
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  padding: const EdgeInsets.all(15),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Практикалық тапсырмалар',
+                          style: GoogleFonts.roboto(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        ...lesson.practiceTasks!.asMap().entries.map((entry) {
+                          final index = entry.key;
+                          final task = entry.value;
+                          return ListTile(
+                            leading: Icon(
+                              task.isSolved
+                                  ? Icons.check_circle
+                                  : Icons.radio_button_unchecked,
+                              color: task.isSolved ? Colors.green : Colors.grey,
+                            ),
+                            title: Text(task.question),
+                            subtitle: Text('Кеңес: ${task.hint}'),
+                            onTap: () {
+                              controller.markTaskSolved(lesson, index);
+                            },
+                          );
+                        }),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
               Column(
                 children: [
                   Row(

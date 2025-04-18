@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 10, vertical: 15),
                       child: Column(
                         children: [
-                          //SliderSection(),
+                          SliderSection(),
                           CategorySection(),
                           FeaturedCourseSection(),
                           LatestCoursesSection(),

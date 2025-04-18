@@ -19,18 +19,22 @@ class LessonInfoWidget extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
         backgroundColor: Colors.grey.withOpacity(.1),
-        child: Icon(icon,
+        child: Icon(
+          icon,
           color: Colors.black.withOpacity(.5),
         ),
       ),
-      title: Text(title,
-        style: GoogleFonts.poppins(
+      title: Text(
+        title,
+        style: GoogleFonts.roboto(
           fontWeight: FontWeight.w200,
           fontSize: 12,
         ),
       ),
-      subtitle: Text(subtitle,
-        style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w800),
+      subtitle: Text(
+        subtitle,
+        style:
+            const TextStyle(color: Colors.black, fontWeight: FontWeight.w800),
       ),
     );
   }

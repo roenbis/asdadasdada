@@ -1,6 +1,6 @@
 class ImageManager {
   static const String getStarted = 'assets/images/get_started.png';
-  static const String logo = 'assets/images/logo.png';
+  static const String logo = 'assets/images/logo.jpg';
   static const String graphic = 'assets/images/graphic.png';
   static const String math = 'assets/images/math.png';
   static const String personalDevelopment =

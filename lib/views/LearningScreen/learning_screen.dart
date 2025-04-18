@@ -12,7 +12,7 @@ class LearningScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final arg = Get.arguments;
     return Scaffold(
-      appBar: inAppBar('Курстың егжей-тегжейлері'),
+      appBar: inAppBar('Курс ақпараты'),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: SingleChildScrollView(

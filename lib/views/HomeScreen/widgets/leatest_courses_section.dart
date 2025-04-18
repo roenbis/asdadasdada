@@ -23,7 +23,7 @@ class LatestCoursesSection extends StatelessWidget {
           children: [
             Text(
               'Соңғы курстар',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
                 color: Colors.black.withOpacity(.6),
@@ -31,7 +31,7 @@ class LatestCoursesSection extends StatelessWidget {
             ),
             Text(
               'Барлығын қарау',
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 color: AppColors.primary,
               ),
             ),
@@ -64,7 +64,7 @@ class LatestCoursesSection extends StatelessWidget {
                             topRight: Radius.circular(15),
                           ),
                           child: FadeInImage.assetNetwork(
-                            placeholder: 'assets/images/logo.png',
+                            placeholder: 'assets/images/logo.jpg',
                             image: data.thumbnail,
                             height: 120,
                             width: double.infinity,

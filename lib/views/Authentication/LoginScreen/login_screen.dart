@@ -27,7 +27,10 @@ class LoginScreen extends StatelessWidget {
                   // Header Section
                   Column(
                     children: [
-                      Image.asset(ImageManager.logo),
+                      Image.asset(
+                        ImageManager.logo,
+                        height: 200,
+                      ),
                       TextFormat.bold(text: 'Оралуыңызбен!'),
                       TextFormat.small(
                         text: 'Жалғастыру үшін жүйеге кіріңіз',

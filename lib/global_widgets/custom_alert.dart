@@ -25,7 +25,8 @@ class CustomAlert extends StatelessWidget {
     required this.image,
     this.isAnimated,
     this.secondButtonText,
-    this.onSecondButtonTap, this.buttonIcon,
+    this.onSecondButtonTap,
+    this.buttonIcon,
   });
 
   @override
@@ -46,7 +47,7 @@ class CustomAlert extends StatelessWidget {
             ),
             Text(
               title,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 fontSize: 25,
                 fontWeight: FontWeight.w800,
               ),
@@ -54,7 +55,7 @@ class CustomAlert extends StatelessWidget {
             Text(
               description,
               textAlign: TextAlign.center,
-              style: GoogleFonts.poppins(
+              style: GoogleFonts.roboto(
                 fontSize: 16,
                 color: Colors.black.withOpacity(.5),
               ),
@@ -63,8 +64,7 @@ class CustomAlert extends StatelessWidget {
               buttonTitle: buttonText,
               onTap: onButtonTap ?? () => Get.back(),
             ),
-
-            if(secondButtonText != null)...[
+            if (secondButtonText != null) ...[
               const SizedBox(
                 height: 5,
               ),
