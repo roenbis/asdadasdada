@@ -11,10 +11,28 @@ class UserModel {
     this.fullName,
   });
 
+  Map<String, dynamic> toMap() {
+    return {
+      'username': username,
+      'full_name': fullName,
+      'email': email,
+      'password': password,
+    };
+  }
+
+  factory UserModel.fromMap(Map<String, dynamic> map) {
+    return UserModel(
+      username: map['username'],
+      fullName: map['full_name'],
+      email: map['email'],
+      password: map['password'],
+    );
+  }
+
   Map<String, dynamic> toJson() {
     return {
-      'full_name' : fullName,
       'username': username,
+      'full_name': fullName,
       'email': email,
       'password': password,
     };

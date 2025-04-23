@@ -21,11 +21,16 @@ class AuthServices {
       'password': user.password,
     });
 
+    print(AppUrls.register);
+    print('Request status code: ${request.statusCode}');
+    print('Sending registration data: ${user.toJson()}');
+
     if (request.statusCode == 200) {
       pref.setString('token', jsonDecode(request.body)['response']['token']);
       pref.setString('name', user.fullName!);
       return true;
     } else {
+      print('Registration failed: ${request.body}');
       return false;
     }
   }

@@ -6,7 +6,7 @@ import 'package:qazquery/helpers/form_helpers.dart';
 import 'package:qazquery/routes/route_names.dart';
 import 'package:qazquery/utils/assets_manager.dart';
 import 'package:qazquery/utils/themes.dart';
-import '../../../utils/colors.dart';
+import 'package:qazquery/utils/colors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -97,11 +97,12 @@ class LoginScreen extends StatelessWidget {
                             isLoading: controller.isLoading.value,
                             buttonTitle: 'Кіру',
                             onTap: () {
-                              // if (controller.globalKey.currentState!.validate()) {
-                              //   controller.login();
-                              // }
+                              if (controller.globalKey.currentState!
+                                  .validate()) {
+                                controller.login();
+                              }
 
-                              Get.toNamed(RouteNames.home);
+                              //Get.toNamed(RouteNames.home);
                             },
                           ),
                           const SizedBox(
@@ -117,12 +118,12 @@ class LoginScreen extends StatelessWidget {
                               const SizedBox(
                                 width: 5,
                               ),
-                              // TextFormat.small(
-                              //   text: "Sign Up",
-                              //   textColor: AppColors.primary,
-                              //   fontWeight: FontWeight.w600,
-                              //   onTap: () => Get.toNamed(RouteNames.register),
-                              // ),
+                              TextFormat.small(
+                                text: "Sign Up",
+                                textColor: AppColors.primary,
+                                fontWeight: FontWeight.w600,
+                                onTap: () => Get.toNamed(RouteNames.register),
+                              ),
                             ],
                           ),
                         ],
