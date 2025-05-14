@@ -119,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                                 width: 5,
                               ),
                               TextFormat.small(
-                                text: "Sign Up",
+                                text: "Тіркелу",
                                 textColor: AppColors.primary,
                                 fontWeight: FontWeight.w600,
                                 onTap: () => Get.toNamed(RouteNames.register),
