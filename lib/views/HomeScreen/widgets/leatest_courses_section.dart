@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:qazquery/controllers/home_controller.dart';
 import 'package:qazquery/utils/themes.dart';
 import '../../../utils/colors.dart';
+import 'package:qazquery/routes/route_names.dart';
 
 class LatestCoursesSection extends StatelessWidget {
   const LatestCoursesSection({super.key});
@@ -22,19 +23,19 @@ class LatestCoursesSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Соңғы курстар',
+              'Курстар',
               style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
                 color: Colors.black.withOpacity(.6),
               ),
             ),
-            Text(
-              'Барлығын қарау',
-              style: GoogleFonts.roboto(
-                color: AppColors.primary,
-              ),
-            ),
+            // Text(
+            //   'Барлығын қарау',
+            //   style: GoogleFonts.roboto(
+            //     color: AppColors.primary,
+            //   ),
+            // ),
           ],
         ),
         const SizedBox(
@@ -113,21 +114,26 @@ class LatestCoursesSection extends StatelessWidget {
                           const SizedBox(
                             height: 5,
                           ),
-                          Container(
-                            decoration: BoxDecoration(
+                          InkWell(
+                            onTap: () => Get.toNamed(RouteNames.courseLearn,
+                                arguments: data),
+                            child: Container(
+                              decoration: BoxDecoration(
                                 border: Border.all(
                                     color: AppColors.primary, width: 1.5),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: const Center(
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 15,
-                                  vertical: 10,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: const Center(
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 15,
+                                    vertical: 10,
+                                  ),
+                                  child: Text("Курсқа өту"),
                                 ),
-                                child: Text("Қазір сатып алу"),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

@@ -5,6 +5,7 @@ import 'package:qazquery/global_widgets/custom_app_bar.dart';
 import 'package:qazquery/routes/route_names.dart';
 import '../../utils/colors.dart';
 import '../../utils/themes.dart';
+import 'package:qazquery/views/HomeScreen/widgets/leatest_courses_section.dart';
 
 class BookmarkScreen extends StatefulWidget {
   const BookmarkScreen({super.key});
@@ -22,119 +23,35 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
     controller.retrieveBookmarks();
   }
 
-  @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Scaffold(
-      appBar: customAppBar(),
-      body: Obx(() {
-        final bookmarks = controller.bookmarks;
-        return bookmarks.isEmpty
-            ? const Center(
-                child: Text("Сізде таңдаулы сабақ жоқ"),
-              )
-            : ListView.builder(
-                padding: const EdgeInsets.all(15),
-                itemCount: bookmarks.length,
-                itemBuilder: (context, index) {
-                  final data = bookmarks[index];
-                  return Container(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    margin: const EdgeInsets.only(bottom: 10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(.1),
-                          blurRadius: 1,
-                        )
-                      ],
-                    ),
-                    child: ListTile(
-                      onTap: () =>
-                          Get.toNamed(RouteNames.bookmarkPlayer, arguments: {
-                        'data': data,
-                        'index': index,
-                      }),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
+                child: SafeArea(
+                    child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                      child: Column(
                         children: [
-                          Container(
-                            width: double.infinity,
-                            height: 100,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              image: DecorationImage(
-                                image: NetworkImage(data['course_thumbnail']),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'Курс: ${data['course_name']}',
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          LatestCoursesSection(),
                         ],
                       ),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Сабақ: ${data['title']}',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.black.withOpacity(.5),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.deepPurple.withOpacity(.1),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 5.0,
-                                  horizontal: 10,
-                                ),
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: TextFormat.extraSmall(
-                                    text: data['time'].toString(),
-                                    textColor: Colors.deepPurple,
-                                  ),
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () => controller.deleteBookmark(index),
-                                child: CircleAvatar(
-                                  backgroundColor:
-                                      AppColors.primary.withOpacity(.1),
-                                  child: Icon(
-                                    Icons.delete,
-                                    color: AppColors.primary,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              );
-      }),
+                    )
+                  ],
+                )),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -20,11 +20,11 @@ class BottomBarView extends StatelessWidget {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.book),
-                  label: 'Таңдаулылар',
+                  label: 'Курстар',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.co_present_outlined),
-                  label: 'Менің курстарым',
+                  label: 'Жеке кабинет',
                 ),
               ]),
         ));

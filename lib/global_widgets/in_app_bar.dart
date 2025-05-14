@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../utils/colors.dart';
 
-PreferredSizeWidget inAppBar(String title) {
+PreferredSizeWidget inAppBar(String title, {List<Widget>? actions}) {
   return AppBar(
     backgroundColor: AppColors.background,
     centerTitle: true,
@@ -16,5 +16,6 @@ PreferredSizeWidget inAppBar(String title) {
       title,
       style: GoogleFonts.roboto(fontWeight: FontWeight.w600),
     ),
+    actions: actions,
   );
 }

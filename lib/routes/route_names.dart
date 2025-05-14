@@ -8,4 +8,5 @@ class RouteNames {
   static const String courseLearn = '/courseLearn';
   static const String lesson = '/lesson';
   static const String bookmarkPlayer = '/bookmark-player';
+  static const String feedback = '/feedback';
 }

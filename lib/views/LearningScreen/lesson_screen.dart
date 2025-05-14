@@ -8,6 +8,7 @@ import 'package:qazquery/global_widgets/video_player.dart';
 import 'package:qazquery/models/course_model.dart';
 import 'package:qazquery/views/LearningScreen/widgets/lesson_info_widget.dart';
 import 'package:video_player/video_player.dart';
+import 'package:qazquery/routes/route_names.dart';
 
 class LessonScreen extends StatelessWidget {
   const LessonScreen({super.key});
@@ -22,8 +23,25 @@ class LessonScreen extends StatelessWidget {
         course.topics![controller.expandedTileIndex.value].lesson;
 
     return Scaffold(
-      appBar:
-          inAppBar(course.topics![controller.expandedTileIndex.value].title),
+      appBar: inAppBar(
+        course.topics![controller.expandedTileIndex.value].title,
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert, color: Colors.black),
+            onSelected: (value) {
+              if (value == 'feedback') {
+                Get.toNamed(RouteNames.feedback);
+              }
+            },
+            itemBuilder: (context) => [
+              const PopupMenuItem<String>(
+                value: 'feedback',
+                child: Text('Кері байланыс'),
+              ),
+            ],
+          ),
+        ],
+      ),
       body: GetBuilder<CourseController>(builder: (controller) {
         final lesson = lessons![controller.currentLessonIndex.value];
         return Padding(
